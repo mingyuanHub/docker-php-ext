@@ -24,8 +24,8 @@
     - 安装PHP扩展rabbitMQ
 
 #### 进入目录，执行docker命令
-    - docker build --tag=mamingyuan/game:1.0 .
-    - docker run -d -p 9093:80 --name mmy-apache3  mamingyuan/game:1.0
+    - docker build -t php-ext-test .
+    - docker docker run -d --name mmy-ext1 -p 9096:80 php-ext-test
 
 #### 访问
     http://localhost:9093/
