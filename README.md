@@ -24,16 +24,14 @@
     - 安装PHP扩展rabbitMQ
 
 #### 进入目录，执行docker命令
-    - docker build -t php-ext-test .
-    - docker docker run -d --name mmy-ext1 -p 9096:80 php-ext-test
+    - docker build -t mamingyuan/php-ext:1.0 .
+    - docker docker run -d --name mmy-ext1 -p 9096:80 mamingyuan/php-ext:1.0
 
 #### 访问
-    http://localhost:9093/
-    http://localhost:9093/game-service/info.php
+    http://localhost:9096/info.php
 
 #### 推送镜像到dockerHub
-    docker tag mamingyuan/game:1.0 mamingyuan/php-game:1.0
-    docker push mamingyuan/php-game:1.0
+    docker push mamingyuan/php-ext:1.0
 
 ---
 
@@ -41,8 +39,8 @@
     游戏项目已构建docker镜像
 
 #### 拉取镜像  
-    docker pull mamingyuan/php-game:1.1
+    docker pull mamingyuan/mamingyuan/php-ext:1.0
 ####  容器生成  
-    docker run -d -p 8082:80 --name mmy-game  mamingyuan/php-game:1.1
+    docker run -d -p 8082:80 --name mmy-game  mamingyuan/mamingyuan/php-ext:1.0
 #### 访问地址  
-    http://39.98.138.27:8082/game-service/
+    http://39.98.138.27:8082/info.php/
