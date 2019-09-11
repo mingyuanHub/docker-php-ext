@@ -41,6 +41,6 @@
 #### 拉取镜像  
     docker pull mamingyuan/mamingyuan/php-ext:1.0
 ####  容器生成  
-    docker run -d -p 8082:80 --name mmy-game  mamingyuan/mamingyuan/php-ext:1.0
+    docker run -d -p 8082:80 --name mmy-ext  mamingyuan/mamingyuan/php-ext:1.0
 #### 访问地址  
     http://39.98.138.27:8082/info.php/
